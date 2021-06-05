@@ -53,5 +53,5 @@ export const Ilustation = styled.img`
 `
 
 export const Paragraph = styled.p`
-    padding: 0.5rem 2rem;
+    padding: 0.5rem 2rem 0.5rem 0;
 `

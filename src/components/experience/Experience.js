@@ -27,7 +27,7 @@ const Experience = () => {
                 put hands on my keyboard and made this portfolio.
               </Paragraph>
               <Paragraph>
-                I want to be a real professional, so i hope to be able to update
+                I want to be a real professional, so I hope to be able to update
                 this section soon.
               </Paragraph>
             </div>

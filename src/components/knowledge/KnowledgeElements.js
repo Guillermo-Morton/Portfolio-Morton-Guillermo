@@ -3,16 +3,17 @@ export const Flex = styled.div`
  display: flex;
  justify-content: center;
  align-items: center;
- padding: 10rem 0;
+ padding: 8rem 0;
  @media screen and (max-width: 852px) {
     flex-direction: column;
+    align-items:center;
     padding: 6.3rem 0;
   }
 `
 export const Title = styled.h2`
   font-size: 3.5rem;
-  margin: 3rem 0 0 2rem;
-  color:#fff;
+  margin: 3rem 0 0 0;
+  color:#000;
   @media screen and (max-width: 1270px) {
     font-size: 2.5rem;
   }
@@ -25,7 +26,7 @@ export const Title = styled.h2`
 export const SubTitle = styled.h2`
   font-size: 2rem;
   margin: 0.5rem 0 0;
-  color:#fff;
+  color:#000;
   @media screen and (max-width: 1270px) {
     font-size: 1.3rem;
   }
@@ -36,7 +37,7 @@ export const SubTitle = styled.h2`
   }
 `;
 export const Ilustation = styled.img`
-    width:35rem!important;
+    width:27rem!important;
     margin: 3rem 0 0;
     @media screen and (max-width: 1270px) {
         width:20rem;
@@ -47,6 +48,17 @@ export const Ilustation = styled.img`
 `
 
 export const Paragraph = styled.p`
-    padding: 0.5rem 2rem;
-    color:#fff;
+    padding: 0.5rem 0;
+    font-size:2rem;
+    color:#000;
+`
+export const List = styled.ul`
+      width:30rem;
+      list-style:none;
+      padding: 0;
+`
+export const Item = styled.li`
+      font-size:1.3rem;
+      padding: 0.2rem 0;
+
 `
