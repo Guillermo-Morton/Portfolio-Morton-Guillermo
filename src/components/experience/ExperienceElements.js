@@ -3,21 +3,15 @@ export const Flex = styled.div`
  display: flex;
  justify-content: center;
  align-items: center;
- padding: 10rem 0;
+ padding: 12rem 0;
  @media screen and (max-width: 852px) {
     flex-direction: column;
     padding: 6.3rem 0;
   }
-  &.about{
-    padding: 10rem 0!important;
-    @media screen and (max-width: 852px) {
-        flex-direction: column-reverse;
-      }
-  }
 `
 export const Title = styled.h2`
   font-size: 3.5rem;
-  margin: 3rem 1rem 0 0;
+  margin: 3rem 0 0 2rem;
   color:#fff;
   @media screen and (max-width: 1270px) {
     font-size: 2.5rem;
@@ -42,10 +36,10 @@ export const SubTitle = styled.h2`
   }
 `;
 export const Ilustation = styled.img`
-    width:26.5rem;
+    width:30rem;
     margin: 3rem 0 0;
     @media screen and (max-width: 1270px) {
-        width:40%;
+        width:20rem;
       }
     @media screen and (max-width: 852px) {
         width:100%;
@@ -54,4 +48,5 @@ export const Ilustation = styled.img`
 
 export const Paragraph = styled.p`
     padding: 0.5rem 2rem;
+    color:#fff;
 `

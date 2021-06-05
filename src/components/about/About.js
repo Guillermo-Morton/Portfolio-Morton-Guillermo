@@ -14,7 +14,7 @@ const About = () => {
               <Title>
                 Hi <br /> I'm Guillermo
               </Title>
-              <SubTitle>A full stack developer</SubTitle>
+              <SubTitle>A full stack developer.</SubTitle>
             </div>
             <Ilustation src={ilustation1}></Ilustation>
           </Flex>
@@ -27,7 +27,7 @@ const About = () => {
             <div>
               <Title className="font-black">About me</Title>
               <SubTitle className="font-black">
-                A developer from Argentina
+                A developer from Argentina.
               </SubTitle>
               <Paragraph>
                 I'm 20 years old. I´ve been coding since June of 2020. Learned
@@ -40,7 +40,7 @@ const About = () => {
               </Paragraph>
               <Paragraph>
                 Immediately fell in love with what I'm doing. I'm always up to
-                learn new things and technologies
+                learn new things and technologies.
               </Paragraph>
             </div>
           </Flex>
