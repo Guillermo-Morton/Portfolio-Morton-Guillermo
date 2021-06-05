@@ -1,0 +1,25 @@
+@import "~@material/animation/functions";
+
+.site-header {
+  // header styling:
+  background: #f8f9fa;
+  z-index: 99;
+  position: fixed;
+  top: 0px;
+  left: 0;
+  right: 0;
+  height: 80px;
+  transition: 0.5s;
+  // our animation-related styles:
+  transform: translate3d(0, 0, 0);
+  transition: mdc-animation-exit-temporary(transform, 250ms);
+  will-change: transform;
+
+  &.hidden {
+    transform: translate3d(0, -100%, 0);
+    transition: mdc-animation-enter(transform, 200ms);
+  }
+  @media screen and (max-width: 768px) {
+    height: 60px;
+  }
+}
