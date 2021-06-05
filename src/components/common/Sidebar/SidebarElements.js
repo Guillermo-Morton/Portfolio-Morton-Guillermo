@@ -22,10 +22,7 @@ export const SidebarContainer = styled.aside`
 export const CloseIcon = styled(FaTimes)`
   color: #fff;
   &:hover {
-    color: #1d428d;
-  }
-  &.active {
-    color: #1d428d;
+    color: #D4D4D4;
   }
 `;
 
@@ -54,10 +51,10 @@ export const SidebarLink = styled(Link)`
   cursor: pointer;
 
   &.active {
-    color: #FFC700;
+    color: #c8dafe;
   }
   &.active:hover {
-    color: #ffdc61;
+    color: #a7bde8;
   }
   &:hover {
     transition: all 0.4s ease-in-out;
@@ -99,7 +96,7 @@ export const SideBtnLink = styled(Link)`
 
   &:hover {
     transition: all 0.4s ease-in-out;
-    background: #fff;
+    background: #c8dafe;
     color: #010606;
   }
 `;

@@ -26,10 +26,10 @@ export const NavLink = styled(Link)`
   cursor: pointer;
 
   &.active {
-    color: #FFC700;
+    color: #c8dafe;
   }
   &.active:hover {
-    color: #ffdc61;
+    color: #a7bde8;
   }
   &:hover {
     transition: all 0.4s ease-in-out;
@@ -99,7 +99,7 @@ export const NavBtnLink = styled(Link)`
 
   &:hover {
     transition: all 0.4s ease-in-out;
-    background: #fff;
+    background: #c8dafe;
     color: #010606;
   }
 `;
