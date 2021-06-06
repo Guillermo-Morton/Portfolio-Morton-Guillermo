@@ -4,7 +4,6 @@ import {
   SubTitle,
   Ilustation,
   Flex,
-  Paragraph,
   List,
   Item
 } from "./KnowledgeElements";
