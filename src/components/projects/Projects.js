@@ -59,7 +59,7 @@ const Projects = () => {
               <SubTitle>Morty's Two Projects</SubTitle>
               <Paragraph>
                 These are e-comerce websites. They were made using JavaScript,
-                Bootstrap and HTML5
+                Bootstrap and HTML5.
               </Paragraph>
               <div className="d-flex-start">
                 <ProjectLink
@@ -81,7 +81,7 @@ const Projects = () => {
               <SubTitle>DM Deport</SubTitle>
               <Paragraph>
                 This is another e-comerce website. It was made for a local
-                client using CSS3, JavaScript, HTML5 and Bootstrap
+                client using CSS3, JavaScript, HTML5 and Bootstrap.
               </Paragraph>
               <ProjectLink
                 target="_blank"
