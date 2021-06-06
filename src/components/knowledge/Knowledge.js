@@ -28,6 +28,7 @@ const Knowledge = () => {
                         <List>
                             <Item>ExpressJS</Item>
                             <Item>MongoDB</Item>
+                            <Item>NodeJS</Item>
                         </List>
                         <SubTitle>Tool kits & frameworks</SubTitle>
                         <List>

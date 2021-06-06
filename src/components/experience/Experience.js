@@ -17,12 +17,11 @@ const Experience = () => {
             <div>
               <Title>My experience</Title>
               <Paragraph>
-                As I started coding not much ago, I don't really have a lot of
-                working experience.
+                I don't really have a lot of
+                working experience, as I started coding not much ago.
               </Paragraph>
               <Paragraph>
-                I made a couple websites, for local business, and actually got
-                paid for doing that. I got more centered on learning and
+                I made a couple of websites for local business. I got more focused on learning and
                 improving than working and making money. I feel ready now so I
                 put hands on my keyboard and made this portfolio.
               </Paragraph>

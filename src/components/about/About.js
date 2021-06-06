@@ -30,16 +30,15 @@ const About = () => {
                 A developer from Argentina.
               </SubTitle>
               <Paragraph>
-                I'm 20 years old. I´ve been coding since June of 2020. Learned
-                as much as I could in this period of time.
+                I'm 20 years old. I´ve been coding since June of 2020. I learned
+                as much as I could since then.
               </Paragraph>
               <Paragraph>
-                Everything happened really fast, the thought pop up in my head
-                and I knew I had to. So I droped of college of Architecture and
-                started learning programming.
+                Everything happened really fast, the thought came into my mind
+                and I knew I had to. So I started learning programming.
               </Paragraph>
               <Paragraph>
-                Immediately fell in love with what I'm doing. I'm always up to
+                I fell in love immediately with what I'm doing. I'm always up to
                 learn new things and technologies.
               </Paragraph>
             </div>

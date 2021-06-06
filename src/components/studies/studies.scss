@@ -1,0 +1,12 @@
+.d-flex{
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: center!important;
+    &.flex-column{
+        flex-direction: column;
+    }
+}
+.black{
+    background-color: black;
+}
