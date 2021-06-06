@@ -36,7 +36,7 @@ export const NavLink = styled(Link)`
     transition: all 0.4s ease-in-out;
     color: #D4D4D4;
 `;
-export const NavBrand = styled(Link)`
+export const NavBrand = styled(LinkBtn)`
   color: #fff;
   display: flex;
   align-items: center;

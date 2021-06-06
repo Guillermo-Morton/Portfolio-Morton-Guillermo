@@ -73,7 +73,7 @@ const Navbar = () => {
     <>
       <Sidebar toggle={toggle} isOpen={isOpen}></Sidebar>
       <Nav className={`site-header ${esconderNav}`}>
-        <NavBrand onClick={toggleScroll} to="/">Guillermo Morton</NavBrand>
+        <NavBrand onClick={toggleScroll} exact={true} to="/">Guillermo Morton</NavBrand>
         <Bars onClick={toggle} />
         <NavMenu>
           <NavLink
@@ -123,7 +123,7 @@ const Navbar = () => {
           </NavLink>
         </NavMenu>
         <NavBtn>
-          <NavBtnLink to="/signin">Contact me</NavBtnLink>
+          <NavBtnLink to="/contact">Contact me</NavBtnLink>
         </NavBtn>
       </Nav>
     </>
