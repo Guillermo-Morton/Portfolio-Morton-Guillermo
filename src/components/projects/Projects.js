@@ -14,7 +14,7 @@ const Projects = () => {
       <Fragment>
         <div>
           <Container>
-            <Flex>
+            <Flex className='projects'>
               <Title className="font-black">My Projects</Title>
 
               <SubTitle>Rollingnews</SubTitle>

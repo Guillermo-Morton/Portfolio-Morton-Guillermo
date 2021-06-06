@@ -14,7 +14,7 @@ const Knowledge = () => {
         <Fragment>
             <div>
                 <Container>
-                    <Flex>
+                    <Flex className='knowledge'>
                         <div>
                         <Title>My Knowledge</Title>
                         <SubTitle>Advanced/medium</SubTitle>

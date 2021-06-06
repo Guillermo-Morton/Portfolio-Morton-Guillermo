@@ -3,7 +3,7 @@ export const Flex = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 6rem 0;
+  padding: 3rem 0;
   @media screen and (max-width: 852px) {
     flex-direction: column;
     align-items: center;

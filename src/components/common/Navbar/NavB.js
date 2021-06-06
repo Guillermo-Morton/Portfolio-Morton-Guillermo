@@ -1,6 +1,8 @@
-import React, {useState, useEffect} from "react";
+import React, { useState, useEffect } from "react";
 
 import "./nav.scss";
+
+import { animateScroll as scroll } from "react-scroll";
 
 import {
   Nav,
@@ -9,7 +11,7 @@ import {
   NavMenu,
   NavBtn,
   NavBtnLink,
-  NavBrand
+  NavBrand,
 } from "./NavbarElements";
 
 import Sidebar from "../Sidebar/Sidebar";
@@ -26,10 +28,10 @@ import {
 } from "rxjs/operators";
 
 import { useObservable } from "rxjs-hooks";
+import { scrollToTop } from "react-scroll/modules/mixins/animate-scroll";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
-  
 
   const toggle = () => {
     setIsOpen(!isOpen);
@@ -46,15 +48,19 @@ const Navbar = () => {
   };
 
   const watchScroll = () =>
-  of(typeof window === "undefined").pipe(
-    filter((bool) => !bool),
-    switchMap(() => fromEvent(window, "scroll", { passive: true })),
-    throttleTime(0, animationFrameScheduler),
-    map(() => window.pageYOffset),
-    pairwise(),
-    map(([previous, current]) => (current < previous ? "Up" : "Down")),
-    distinctUntilChanged()
-  );
+    of(typeof window === "undefined").pipe(
+      filter((bool) => !bool),
+      switchMap(() => fromEvent(window, "scroll", { passive: true })),
+      throttleTime(0, animationFrameScheduler),
+      map(() => window.pageYOffset),
+      pairwise(),
+      map(([previous, current]) => (current < previous ? "Up" : "Down")),
+      distinctUntilChanged()
+    );
+
+  const toggleScroll = () => {
+    scroll.scrollToTop();
+  };
 
   const scrollDirection = useObservable(watchScroll, "Up");
   const esconderNav = scrollDirection === "Down" ? "hidden" : "null";
@@ -65,27 +71,54 @@ const Navbar = () => {
 
   return (
     <>
-      <Sidebar
-      toggle={toggle}
-      isOpen={isOpen}
-      ></Sidebar>
+      <Sidebar toggle={toggle} isOpen={isOpen}></Sidebar>
       <Nav className={`site-header ${esconderNav}`}>
-        <NavBrand to="/">Guillermo Morton</NavBrand>
+        <NavBrand onClick={toggleScroll} to="/">Guillermo Morton</NavBrand>
         <Bars onClick={toggle} />
         <NavMenu>
-          <NavLink to="/about" activeStyle>
+          <NavLink
+            to="about"
+            spy={true}
+            smooth={true}
+            duration={500}
+            activeClass="active"
+          >
             About me
           </NavLink>
-          <NavLink to="/experience" activeStyle>
+          <NavLink
+            to="experience"
+            spy={true}
+            smooth={true}
+            duration={500}
+            activeClass="active"
+          >
             Experience
           </NavLink>
-          <NavLink to="/knowledge" activeStyle>
+          <NavLink
+            to="knowledge"
+            spy={true}
+            smooth={true}
+            duration={500}
+            activeClass="active"
+          >
             Knowledge
           </NavLink>
-          <NavLink to="/studies" activeStyle>
+          <NavLink
+            to="studies"
+            spy={true}
+            smooth={true}
+            duration={500}
+            activeClass="active"
+          >
             Studies
           </NavLink>
-          <NavLink to="/projects" activeStyle>
+          <NavLink
+            to="projects"
+            spy={true}
+            smooth={true}
+            duration={500}
+            activeClass="active"
+          >
             Projects
           </NavLink>
         </NavMenu>

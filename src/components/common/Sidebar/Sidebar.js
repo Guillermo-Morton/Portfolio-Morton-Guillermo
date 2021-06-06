@@ -1,4 +1,4 @@
-import React, {  } from "react";
+import React from "react";
 import {
   CloseIcon,
   SidebarContainer,
@@ -7,8 +7,10 @@ import {
   SidebarWrapper,
   SidebarLink,
   SideBtn,
-  SideBtnLink
+  SideBtnLink,
 } from "./SidebarElements";
+
+import { animateScroll as scroll } from "react-scroll";
 
 const Sidebar = (props) => {
   return (
@@ -18,24 +20,66 @@ const Sidebar = (props) => {
       </Icon>
       <SidebarWrapper>
         <SidebarMenu isOpen={props.isOpen}>
-          <SidebarLink to="/about" activeStyle>
+          <SidebarLink
+            to="about"
+            spy={true}
+            smooth={true}
+            duration={500}
+            activeClass="active"
+            activeStyle
+            onClick={props.toggle}
+          >
             About me
           </SidebarLink>
-          <SidebarLink to="/experience" activeStyle>
+          <SidebarLink
+            to="experience"
+            spy={true}
+            smooth={true}
+            duration={500}
+            activeClass="active"
+            activeStyle
+            onClick={props.toggle}
+          >
             Experience
           </SidebarLink>
-          <SidebarLink to="/knowledge" activeStyle>
+          <SidebarLink
+            to="knowledge"
+            spy={true}
+            smooth={true}
+            duration={500}
+            activeClass="active"
+            activeStyle
+            onClick={props.toggle}
+          >
             Knowledge
           </SidebarLink>
-          <SidebarLink to="/studies" activeStyle>
+          <SidebarLink
+            to="studies"
+            spy={true}
+            smooth={true}
+            duration={500}
+            activeClass="active"
+            activeStyle
+            onClick={props.toggle}
+          >
             Studies
           </SidebarLink>
-          <SidebarLink to="/projects" activeStyle>
+          <SidebarLink
+            to="projects"
+            spy={true}
+            smooth={true}
+            duration={500}
+            activeClass="active"
+            activeStyle
+            onClick={props.toggle}
+          >
             Projects
           </SidebarLink>
         </SidebarMenu>
         <SideBtn>
-          <SideBtnLink to="/contact" activeStyle>Contact me</SideBtnLink>
+          <SideBtnLink to="/contact" activeStyle>
+            Contact me
+          </SideBtnLink>
         </SideBtn>
       </SidebarWrapper>
     </SidebarContainer>

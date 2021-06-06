@@ -5,14 +5,22 @@ import Knowledge from './knowledge/Knowledge'
 import Studies from './studies/Studies'
 import Projects from './projects/Projects'
 
+import './home.scss'
+
 const Home = () => {
     return (
-        <div>
+        <div className='snapwrapper'>
+            <div  className='snapsection'>
+
             <About/>
-            <Experience></Experience>
-            <Knowledge></Knowledge>
-            <Studies></Studies>
-            <Projects></Projects>
+            </div>
+            <div  className='snapsection'>
+
+            <Experience/>
+            </div>
+            <Knowledge className='snapsection'/>
+            <Studies className='snapsection'/>
+            <Projects className='snapsection'/>
         </div>
     );
 };

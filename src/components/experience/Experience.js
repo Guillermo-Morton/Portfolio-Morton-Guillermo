@@ -13,7 +13,7 @@ const Experience = () => {
     <Fragment>
       <div className="black">
         <Container>
-          <Flex>
+          <Flex className='experience'>
             <div>
               <Title>My experience</Title>
               <Paragraph>

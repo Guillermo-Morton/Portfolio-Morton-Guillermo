@@ -1,5 +1,6 @@
 import { FaBars } from 'react-icons/fa';
-import { NavLink as Link } from 'react-router-dom';
+import { NavLink as LinkBtn } from 'react-router-dom';
+import { Link } from 'react-scroll';
 import styled from 'styled-components';
 
 export const Nav = styled.nav`
@@ -86,7 +87,7 @@ export const NavBtn = styled.nav`
   }
 `;
 
-export const NavBtnLink = styled(Link)`
+export const NavBtnLink = styled(LinkBtn)`
   border-radius: 10px;
   background: #212121;
   padding: 10px 22px;

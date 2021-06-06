@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import { FaTimes } from "react-icons/fa";
-import { NavLink as Link } from "react-router-dom";
+import { NavLink as LinkBtn } from "react-router-dom";
+import { Link } from "react-scroll";
 
 export const SidebarContainer = styled.aside`
   position: fixed;
@@ -82,7 +83,7 @@ export const SideBtn = styled.nav`
   margin-top: 5rem;
 `;
 
-export const SideBtnLink = styled(Link)`
+export const SideBtnLink = styled(LinkBtn)`
   border-radius: 10px;
   background: #212121;
   padding: 10px 22px;
