@@ -40,12 +40,12 @@ export const Paragraph = styled.p`
   font-size: 2rem;
   color: #000;
   @media screen and (max-width: 852px) {
-    padding: 0.5rem 0rem 0.5rem 0;
+    padding: 0.5rem 2rem 0.5rem;
     font-size: 1.2rem!important;
     text-align:center;
     margin: 0;
   @media screen and (max-width: 319px) {
-    padding: 0.5rem 0rem 0.5rem 0;
+    padding: 0.5rem 1rem 0.5rem ;
     font-size: 1rem!important;
     text-align:center;
     margin: 0;
