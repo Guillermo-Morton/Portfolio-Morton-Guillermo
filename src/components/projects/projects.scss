@@ -4,7 +4,25 @@
 .font-black {
   color: black !important;
 }
-.d-flex-start{
+.d-flex-start {
   display: flex;
-  justify-content: start!important;
+  justify-content: start;
+  @media screen and (max-width: 852px) {
+    justify-content: center;
+  }
+  @media screen and (max-width: 319px) {
+    flex-direction: column;
+  }
+}
+.low-margin {
+  margin: 0 0 2rem 0!important;
+  padding: 0 0 0 2rem!important;
+  @media screen and (max-width: 852px) {
+    margin: 0 0.5rem 2rem!important; 
+    padding: 0!important;
+  }
+  @media screen and (max-width: 319px) {
+    margin: 0 0 0.5rem 0 !important;
+    padding: 0!important;
+  }
 }

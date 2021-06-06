@@ -1,14 +1,11 @@
 import styled from "styled-components";
 export const Flex = styled.div`
-  display: flex;
-  justify-content: start;
-  align-items: center;
-  padding: 10rem 0;
-  flex-direction: column;
-  @media screen and (max-width: 852px) {
-    align-items: center;
-    padding: 6.3rem 0;
-  }
+    display: flex;
+    flex-direction:column;
+    @media screen and (max-width: 852px) {
+        text-align: center;
+      }
+
 `;
 export const Title = styled.h2`
   font-size: 3.5rem;
@@ -19,7 +16,7 @@ export const Title = styled.h2`
   }
   @media screen and (max-width: 852px) {
     font-size: 3rem;
-    margin: 3rem 0 0 0;
+    margin: 3rem 0 3rem 0;
     text-align: center;
   }
 `;
@@ -42,8 +39,16 @@ export const Paragraph = styled.p`
   margin: 0 0 0 2rem;
   font-size: 2rem;
   color: #000;
+  @media screen and (max-width: 852px) {
+    padding: 0.5rem 0rem 0.5rem 0;
+    font-size: 1.2rem!important;
+    text-align:center;
+    margin: 0;
   @media screen and (max-width: 319px) {
     padding: 0.5rem 0rem 0.5rem 0;
+    font-size: 1rem!important;
+    text-align:center;
+    margin: 0;
   }
 `;
 
@@ -51,29 +56,36 @@ export const Card = styled.div`
   padding: 1rem 2rem;
   background: #fff;
   margin: 3rem 1rem;
-  width:20rem;
-  border-radius:10px;
-  text-align:center;
+  width: 20rem;
+  border-radius: 10px;
+  text-align: center;
   @media screen and (max-width: 1025px) {
     width: 15rem !important;
   }
   @media screen and (max-width: 560px) {
     width: 80% !important;
-    text-align:center;
+    text-align: center;
   }
-`
+`;
 export const ProjectLink = styled.a`
   text-decoration:none;
   margin: 0 0 2rem 2rem ;
   color: #000;
-  display: flex;
-  align-items: center;
   text-decoration: none;
   padding: 0 2rem 0 0rem;
-  height: 100%;
   cursor: pointer;
-
+  @media screen and (max-width: 852px) {
+    padding: 0.5rem 0rem 0.5rem 0;
+    font-size: 1rem!important;
+    margin: 0 0 1.5rem 0; 
+  }
+  @media screen and (max-width: 319px) {
+    padding: 0.5rem 0rem 0.5rem 0;
+    font-size: 1rem!important;
+    margin: 0 0 0 0;
+  }
   &:hover {
     transition: all 0.4s ease-in-out;
     color: #404040;
+    
 `;
