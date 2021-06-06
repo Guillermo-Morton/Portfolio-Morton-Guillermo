@@ -29,7 +29,6 @@ const Studies = () => {
                   <SubTitle>GrassHopper</SubTitle>
                   <Paragraph>Fundamentals</Paragraph>
                 </Card>
-       
               </div>
                 <Ilustation src={ilustation5}></Ilustation>
               <div className='d-flex'>
