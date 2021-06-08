@@ -2,8 +2,10 @@ import styled from "styled-components";
 export const Flex = styled.div`
     display: flex;
     flex-direction:column;
+    min-height: 100vh;
     @media screen and (max-width: 852px) {
         text-align: center;
+        padding:1.5rem 0;
       }
 
 `;
@@ -49,22 +51,6 @@ export const Paragraph = styled.p`
     font-size: 1rem!important;
     text-align:center;
     margin: 0;
-  }
-`;
-
-export const Card = styled.div`
-  padding: 1rem 2rem;
-  background: #fff;
-  margin: 3rem 1rem;
-  width: 20rem;
-  border-radius: 10px;
-  text-align: center;
-  @media screen and (max-width: 1025px) {
-    width: 15rem !important;
-  }
-  @media screen and (max-width: 560px) {
-    width: 80% !important;
-    text-align: center;
   }
 `;
 export const ProjectLink = styled.a`

@@ -8,8 +8,6 @@
   top: 0px;
   left: 0;
   right: 0;
-  height: 80px;
-  transition: 0.5s;
   // our animation-related styles:
   transform: translate3d(0, 0, 0);
   transition: mdc-animation-exit-temporary(transform, 250ms);
@@ -19,7 +17,29 @@
     transform: translate3d(0, -100%, 0);
     transition: mdc-animation-enter(transform, 200ms);
   }
+  &.transparent {
+    transform: translate3d(0, 0, 0);
+    transition: mdc-animation-exit-temporary(transform, 250ms);
+    height: 50px!important;
+    opacity: 0.5;
+    &:hover{
+      opacity: 1;
+    }
+    &.light{
+      background-color: #fff;
+    }
+    &.black{
+      background-color: #000;
+    }
+ 
+  }
   @media screen and (max-width: 768px) {
     height: 60px;
   }
+}
+.black-font{
+  color:  #000!important;
+}
+.light-font{
+  color:  #fff!important;
 }

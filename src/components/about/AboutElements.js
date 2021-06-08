@@ -3,15 +3,15 @@ export const Flex = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 10rem 0;
+  min-height: 100vh;
   @media screen and (max-width: 852px) {
     flex-direction: column;
-    padding: 6.3rem 0;
+   
   }
   &.about {
-    padding: 10rem 0 !important;
     @media screen and (max-width: 852px) {
       flex-direction: column-reverse;
+      padding:1.5rem 0;
     }
   }
 `;

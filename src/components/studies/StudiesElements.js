@@ -3,11 +3,11 @@ export const Flex = styled.div`
   display: flex;
   justify-content: start;
   align-items: center;
-  padding: 2rem 0;
+  min-height: 100vh;
   @media screen and (max-width: 852px) {
     flex-direction: column;
     align-items: center;
-    padding: 6.3rem 0;
+    padding:1.5rem 0;
   }
 `;
 export const Title = styled.h2`

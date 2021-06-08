@@ -32,6 +32,9 @@ import { scrollToTop } from "react-scroll/modules/mixins/animate-scroll";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const [isTransparent, setIsTransparent] = useState(false);
+  const [isLight, setIsLight] = useState(false);
+  const [isBlack, setIsBlack] = useState(false);
 
   const toggle = () => {
     setIsOpen(!isOpen);
@@ -61,22 +64,67 @@ const Navbar = () => {
   const toggleScroll = () => {
     scroll.scrollToTop();
   };
+  const toggleTransparence = () => {
+    setTimeout(() => {
+      setIsTransparent(true);
+    }, 200);
+  };
+  const toggleLightBackground = () => {
+    setTimeout(() => {
+      setIsBlack(false);
+      setIsLight(true);
+    }, 200);
+  };
+  const toggleBlackBackground = () => {
+    setTimeout(() => {
+      setIsLight(false);
+      setIsBlack(true);
+    }, 200);
+  };
+  const dismiss = () => {
+    setTimeout(()=>{
+      setIsTransparent(false);
+      setIsLight(false);
+      setIsBlack(false);
+    }, 1500)
+  };
 
   const scrollDirection = useObservable(watchScroll, "Up");
   const esconderNav = scrollDirection === "Down" ? "hidden" : "null";
+  const transparentarNav = isTransparent === true ? "transparent" : "null";
+  const aclararNav = isLight === true ? "light" : "null";
+  const aclararLink = isLight === true ? "font-black" : "null";
+  const oscurecerNav = isBlack === true ? "black" : "null";
+  const oscurecerLink = isBlack === true ? "font-light" : "null";
+  console.log(scrollDirection);
 
   useEffect(() => {
     scrollLock();
   }, [isOpen]);
+  useEffect(() => {
+    setIsTransparent(false);
+    setIsLight(false);
+    setIsBlack(false);
+  }, [scrollDirection]);
 
   return (
     <>
       <Sidebar toggle={toggle} isOpen={isOpen}></Sidebar>
-      <Nav className={`site-header ${esconderNav}`}>
-        <NavBrand onClick={toggleScroll} exact={true} to="/">Guillermo Morton</NavBrand>
+      <Nav
+        className={`site-header ${esconderNav} ${transparentarNav} ${aclararNav} ${oscurecerNav}`}
+      >
+        <NavBrand onClick={toggleScroll} exact={true} to="/">
+          Guillermo Morton
+        </NavBrand>
         <Bars onClick={toggle} />
         <NavMenu>
           <NavLink
+            className={`${aclararLink} ${oscurecerLink}`}
+            onClick={() => {
+              toggleTransparence();
+              toggleLightBackground();
+              dismiss();
+            }}
             to="about"
             spy={true}
             smooth={true}
@@ -86,6 +134,12 @@ const Navbar = () => {
             About me
           </NavLink>
           <NavLink
+            className={`${aclararLink} ${oscurecerLink}`}
+            onClick={() => {
+              toggleTransparence();
+              toggleBlackBackground();
+              dismiss();
+            }}
             to="experience"
             spy={true}
             smooth={true}
@@ -95,6 +149,12 @@ const Navbar = () => {
             Experience
           </NavLink>
           <NavLink
+            className={`${aclararLink} ${oscurecerLink}`}
+            onClick={() => {
+              toggleTransparence();
+              toggleLightBackground();
+              dismiss();
+            }}
             to="knowledge"
             spy={true}
             smooth={true}
@@ -104,6 +164,12 @@ const Navbar = () => {
             Knowledge
           </NavLink>
           <NavLink
+            className={`${aclararLink} ${oscurecerLink}`}
+            onClick={() => {
+              toggleTransparence();
+              toggleBlackBackground();
+              dismiss();
+            }}
             to="studies"
             spy={true}
             smooth={true}
@@ -113,6 +179,12 @@ const Navbar = () => {
             Studies
           </NavLink>
           <NavLink
+            className={`${aclararLink} ${oscurecerLink}`}
+            onClick={() => {
+              toggleTransparence();
+              toggleLightBackground();
+              dismiss();
+            }}
             to="projects"
             spy={true}
             smooth={true}
