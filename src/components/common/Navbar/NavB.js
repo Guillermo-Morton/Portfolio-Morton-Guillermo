@@ -35,6 +35,7 @@ const Navbar = () => {
   const [isTransparent, setIsTransparent] = useState(false);
   const [isLight, setIsLight] = useState(false);
   const [isBlack, setIsBlack] = useState(false);
+  const [isHidden, setIsHidden] = useState(false);
 
   const toggle = () => {
     setIsOpen(!isOpen);
@@ -82,11 +83,17 @@ const Navbar = () => {
     }, 200);
   };
   const dismiss = () => {
-    setTimeout(()=>{
+    setTimeout(() => {
       setIsTransparent(false);
       setIsLight(false);
       setIsBlack(false);
-    }, 1500)
+    }, 2000);
+  };
+  const hideLink = () => {
+    setIsHidden(true);
+  };
+  const showLink = () => {
+    setIsHidden(false);
   };
 
   const scrollDirection = useObservable(watchScroll, "Up");
@@ -96,7 +103,7 @@ const Navbar = () => {
   const aclararLink = isLight === true ? "font-black" : "null";
   const oscurecerNav = isBlack === true ? "black" : "null";
   const oscurecerLink = isBlack === true ? "font-light" : "null";
-  console.log(scrollDirection);
+  const ocultarNavLink = isHidden === true ? "hide" : "null";
 
   useEffect(() => {
     scrollLock();
@@ -113,17 +120,25 @@ const Navbar = () => {
       <Nav
         className={`site-header ${esconderNav} ${transparentarNav} ${aclararNav} ${oscurecerNav}`}
       >
-        <NavBrand onClick={toggleScroll} exact={true} to="/">
+        <NavBrand
+          className={`${aclararLink} ${oscurecerLink}`}
+          onClick={() => {
+            showLink();
+            toggleScroll();
+          }}
+          exact={true}
+          to="/"
+        >
           Guillermo Morton
         </NavBrand>
         <Bars onClick={toggle} />
         <NavMenu>
           <NavLink
-            className={`${aclararLink} ${oscurecerLink}`}
+            className={`${aclararLink} ${oscurecerLink} ${ocultarNavLink}`}
             onClick={() => {
+              dismiss();
               toggleTransparence();
               toggleLightBackground();
-              dismiss();
             }}
             to="about"
             spy={true}
@@ -134,11 +149,11 @@ const Navbar = () => {
             About me
           </NavLink>
           <NavLink
-            className={`${aclararLink} ${oscurecerLink}`}
+            className={`${aclararLink} ${oscurecerLink} ${ocultarNavLink}`}
             onClick={() => {
+              dismiss();
               toggleTransparence();
               toggleBlackBackground();
-              dismiss();
             }}
             to="experience"
             spy={true}
@@ -149,11 +164,11 @@ const Navbar = () => {
             Experience
           </NavLink>
           <NavLink
-            className={`${aclararLink} ${oscurecerLink}`}
+            className={`${aclararLink} ${oscurecerLink} ${ocultarNavLink}`}
             onClick={() => {
+              dismiss();
               toggleTransparence();
               toggleLightBackground();
-              dismiss();
             }}
             to="knowledge"
             spy={true}
@@ -164,11 +179,11 @@ const Navbar = () => {
             Knowledge
           </NavLink>
           <NavLink
-            className={`${aclararLink} ${oscurecerLink}`}
+            className={`${aclararLink} ${oscurecerLink} ${ocultarNavLink}`}
             onClick={() => {
+              dismiss();
               toggleTransparence();
               toggleBlackBackground();
-              dismiss();
             }}
             to="studies"
             spy={true}
@@ -179,11 +194,11 @@ const Navbar = () => {
             Studies
           </NavLink>
           <NavLink
-            className={`${aclararLink} ${oscurecerLink}`}
+            className={`${aclararLink} ${oscurecerLink} ${ocultarNavLink}`}
             onClick={() => {
+              dismiss();
               toggleTransparence();
               toggleLightBackground();
-              dismiss();
             }}
             to="projects"
             spy={true}
@@ -195,7 +210,12 @@ const Navbar = () => {
           </NavLink>
         </NavMenu>
         <NavBtn>
-          <NavBtnLink to="/contact">Contact me</NavBtnLink>
+          <NavBtnLink className={ocultarNavLink} onClick={()=>{
+            toggleScroll();
+            hideLink();
+          }} to="/contact">
+            Contact me
+          </NavBtnLink>
         </NavBtn>
       </Nav>
     </>
