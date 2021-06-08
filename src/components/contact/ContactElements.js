@@ -29,7 +29,7 @@ outline: none;
 @media screen and (max-width: 400px) {
   width:15rem!important;
 }
-@media screen and (max-width: 281px) {
+@media screen and (max-width: 290px) {
   width:12rem!important;
 }
 `
