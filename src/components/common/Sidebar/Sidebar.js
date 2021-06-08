@@ -77,7 +77,7 @@ const Sidebar = (props) => {
           </SidebarLink>
         </SidebarMenu>
         <SideBtn>
-          <SideBtnLink to="/contact" activeStyle>
+          <SideBtnLink onClick={props.hideLink} to="/contact" activeStyle>
             Contact me
           </SideBtnLink>
         </SideBtn>

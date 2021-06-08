@@ -116,7 +116,7 @@ const Navbar = () => {
 
   return (
     <>
-      <Sidebar toggle={toggle} isOpen={isOpen}></Sidebar>
+      <Sidebar hideLink={hideLink} toggle={toggle} isOpen={isOpen}></Sidebar>
       <Nav
         className={`site-header ${esconderNav} ${transparentarNav} ${aclararNav} ${oscurecerNav}`}
       >
@@ -131,7 +131,7 @@ const Navbar = () => {
         >
           Guillermo Morton
         </NavBrand>
-        <Bars onClick={toggle} />
+        <Bars className={ocultarNavLink} onClick={toggle} />
         <NavMenu>
           <NavLink
             className={`${aclararLink} ${oscurecerLink} ${ocultarNavLink}`}
