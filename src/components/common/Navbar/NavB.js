@@ -76,13 +76,19 @@ const Navbar = () => {
       setIsBlack(true);
     }, 200);
   };
+  const hideLink = () => {
+    setIsHidden(true);
+  };
+  const showLink = () => {
+    setIsHidden(false);
+  };
 
   const scrollDirection = useObservable(watchScroll, "Up");
   const esconderNav = scrollDirection === "Down" ? "hidden" : "";
   const aclararNav = isLight === true ? "light" : "";
   const aclararLink = isLight === true ? "font-black" : "";
   const oscurecerNav = isBlack === true ? "black" : "";
-  const oscurecerLink = isBlack === true ? "font-light" : "";
+  const ocultarNavLink = isHidden === true ? "hide" : "";
 
   useEffect(() => {
     scrollLock();
@@ -99,6 +105,7 @@ const Navbar = () => {
         className={`site-header ${esconderNav}  ${aclararNav} ${oscurecerNav}`}
       >
         <NavBrand onClick={()=>{
+          showLink();
           toggleScroll();
           toggleBlackBackground();
         }} className={`${aclararLink}`} exact={true} to="/">
@@ -107,7 +114,7 @@ const Navbar = () => {
         <Bars className={ocultarNavLink} onClick={toggle} />
         <NavMenu>
           <NavLink
-            className={`${aclararLink}`}
+            className={`${aclararLink} ${ocultarNavLink}`}
             onClick={() => {
               toggleLightBackground();
             }}
@@ -120,7 +127,7 @@ const Navbar = () => {
             About me
           </NavLink>
           <NavLink
-            className={`${aclararLink}`}
+            className={`${aclararLink} ${ocultarNavLink}`}
             onClick={() => {
               toggleBlackBackground();
             }}
@@ -133,7 +140,7 @@ const Navbar = () => {
             Experience
           </NavLink>
           <NavLink
-            className={`${aclararLink}`}
+            className={`${aclararLink} ${ocultarNavLink}`}
             onClick={() => {
               toggleLightBackground();
             }}
@@ -146,7 +153,7 @@ const Navbar = () => {
             Knowledge
           </NavLink>
           <NavLink
-            className={`${aclararLink}`}
+            className={`${aclararLink} ${ocultarNavLink}`}
             onClick={() => {
               toggleBlackBackground();
             }}
@@ -159,7 +166,7 @@ const Navbar = () => {
             Studies
           </NavLink>
           <NavLink
-            className={`${aclararLink}`}
+            className={`${aclararLink} ${ocultarNavLink}`}
             onClick={() => {
               toggleLightBackground();
             }}
