@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 
 export const Flex = styled.div`
   display: flex;
@@ -12,34 +12,32 @@ export const Flex = styled.div`
     padding: 6.3rem 0;
   }
 `;
-export const Form= styled.form`
-`
-export const Label= styled.label`
-margin:0.3rem 0;
-`
-export const Input= styled.input`
-width:30rem!important;
-padding: 0.5rem 1rem;
-border-radius:10px;
-border: 0.5px solid grey;
--webkit-appearance: none;
-outline: none;
-`
-export const TextArea= styled.textarea`
-width:30rem!important;
-padding: 0.5rem 1rem;
-border-radius:10px;
-border: 0.5px solid grey;
-outline: none;
-resize: none;
-
-`
-export const FormControl= styled.div`
-  width:100%!important;
+export const Form = styled.form``;
+export const Label = styled.label`
+  margin: 0.3rem 0;
+`;
+export const Input = styled.input`
+  width: 30rem !important;
+  padding: 0.5rem 1rem;
+  border-radius: 10px;
+  border: 0.5px solid grey;
+  -webkit-appearance: none;
+  outline: none;
+`;
+export const TextArea = styled.textarea`
+  width: 30rem !important;
+  padding: 0.5rem 1rem;
+  border-radius: 10px;
+  border: 0.5px solid grey;
+  outline: none;
+  resize: none;
+`;
+export const FormControl = styled.div`
+  width: 100% !important;
   display: flex;
-  flex-direction:column;
-  margin:1rem 0;
-`
+  flex-direction: column;
+  margin: 1rem 0;
+`;
 export const Title = styled.h2`
   font-size: 3.5rem;
   margin: 3rem 0;
@@ -63,7 +61,7 @@ export const Btn = styled.button`
   cursor: pointer;
   transition: all 0.2s ease-in-out;
   text-decoration: none;
-  margin:1rem 0;
+  margin: 1rem 0;
 
   &:hover {
     transition: all 0.4s ease-in-out;

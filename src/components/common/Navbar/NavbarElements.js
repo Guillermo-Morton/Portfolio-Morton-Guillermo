@@ -13,7 +13,7 @@ export const Nav = styled.nav`
   transition: 0.4s;
 
   @media screen and (max-width: 852px) {
-    height: 60px;
+    height: 50px;
   }
 `;
 
@@ -31,6 +31,15 @@ export const NavLink = styled(Link)`
   }
   &.active:hover {
     color: #a7bde8;
+  }
+  &.font-black {
+    color: #454545!important;
+    &:hover{
+    color: black!important;
+    }
+    &.active{
+      color:black!important
+    }
   }
   &:hover {
     transition: all 0.4s ease-in-out;
