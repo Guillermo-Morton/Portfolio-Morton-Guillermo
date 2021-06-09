@@ -1,33 +1,35 @@
 import React, { Fragment } from "react";
 import {
   Title,
-  SubTitle,
   Ilustation,
   Flex,
   Paragraph,
+  ContactLink
 } from "./ExperienceElements";
 import ilustation3 from "../../images/ilustration3.png";
 import { Container } from "../../components/GeneralElements";
+import { animateScroll as scroll } from "react-scroll";
 const Experience = () => {
+
+  const toggleScroll = () => {
+    scroll.scrollToTop();
+  };
   return (
     <Fragment>
       <div className="black">
         <Container>
-          <Flex className='experience'>
+          <Flex className="experience">
             <div>
               <Title>My experience</Title>
               <Paragraph>
-                I don't really have a lot of
-                working experience, as I started coding not much ago.
+                As a junior dev I made a couple of websites for local business
+                where I optimized for learning and improving rather than making
+                money. As of now I feel ready provide value to clients and
+                employers alike.
               </Paragraph>
               <Paragraph>
-                I made a couple of websites for local business. I got more focused on learning and
-                improving than working and making money. I feel ready now so I
-                put hands on my keyboard and made this portfolio.
-              </Paragraph>
-              <Paragraph>
-                I want to be a real professional, so I hope to be able to update
-                this section soon.
+                This section of my page would look great with your brand on it!
+                Interested? <ContactLink exact={true} onClick={toggleScroll} to="/contact">Contact me.</ContactLink>
               </Paragraph>
             </div>
             <Ilustation src={ilustation3}></Ilustation>

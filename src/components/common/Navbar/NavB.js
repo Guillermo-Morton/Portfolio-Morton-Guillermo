@@ -182,6 +182,7 @@ const Navbar = () => {
         <NavBtn>
           <NavBtnLink className={ocultarNavLink} onClick={()=>{
             toggleScroll();
+            toggleBlackBackground();
             hideLink();
           }} to="/contact">
             Contact me

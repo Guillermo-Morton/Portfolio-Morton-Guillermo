@@ -11,28 +11,48 @@ export const Flex = styled.div`
     flex-direction: column;
   }
 `;
-export const Form = styled.form``;
-export const Label = styled.label`
-  margin: 0.3rem 0;
-`;
-export const Input = styled.input`
-  width: 30rem !important;
-  padding: 0.5rem 1rem;
-  border-radius: 10px;
-  border: 0.5px solid grey;
-  -webkit-appearance: none;
-  outline: none;
-`;
-export const TextArea = styled.textarea`
-  width: 30rem !important;
-  padding: 0.5rem 1rem;
-  border-radius: 10px;
-  border: 0.5px solid grey;
-  outline: none;
-  resize: none;
-`;
-export const FormControl = styled.div`
-  width: 100% !important;
+export const Form= styled.form`
+`
+export const Label= styled.label`
+margin:0.3rem 0;
+`
+export const Input= styled.input`
+width:30rem!important;
+padding: 0.5rem 1rem;
+border-radius:10px;
+border: 0.5px solid grey;
+-webkit-appearance: none;
+outline: none;
+@media screen and (max-width: 852px) {
+  width:18rem!important;
+}
+@media screen and (max-width: 400px) {
+  width:15rem!important;
+}
+@media screen and (max-width: 290px) {
+  width:12rem!important;
+}
+`
+export const TextArea= styled.textarea`
+width:30rem!important;
+padding: 0.5rem 1rem;
+border-radius:10px;
+border: 0.5px solid grey;
+outline: none;
+resize: none;
+@media screen and (max-width: 852px) {
+  width:18rem!important;
+}
+@media screen and (max-width: 400px) {
+  width:15rem!important;
+}
+@media screen and (max-width: 290px) {
+  width:12rem!important;
+}
+
+`
+export const FormControl= styled.div`
+  width:100%!important;
   display: flex;
   flex-direction: column;
   margin: 1rem 0;

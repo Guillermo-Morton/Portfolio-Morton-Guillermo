@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { NavLink as Link } from 'react-router-dom';
 export const Flex = styled.div`
   display: flex;
   justify-content: center;
@@ -11,7 +12,7 @@ export const Flex = styled.div`
 `;
 export const Title = styled.h2`
   font-size: 3.5rem;
-  margin: 3rem 0 0 2rem;
+  margin: 3rem 0 0;
   color: #fff;
   @media screen and (max-width: 1270px) {
     font-size: 2.5rem;
@@ -53,9 +54,40 @@ export const Ilustation = styled.img`
 `;
 
 export const Paragraph = styled.p`
-  padding: 0.5rem 2rem;
+padding: 0.5rem 0;
+font-size:1.2rem;
+color: #fff;
+@media screen and (max-width: 852px) {
+  padding: 0.5rem 2rem 0.5rem;
+  font-size: 1.1rem!important;
+  text-align:center;
+  margin: 0;
+@media screen and (max-width: 319px) {
+  padding: 0.5rem 1rem 0.5rem ;
+  font-size: 1rem!important;
+  text-align:center;
+  margin: 0;
+}
+`;
+
+export const ContactLink = styled(Link)`
+  text-decoration:none;
+  margin: 0 0 0 0.3rem;
   color: #fff;
+  text-decoration: none;
+  cursor: pointer;
+  font-weight:bold;
+  transition: all 0.2s ease-in-out;
+  @media screen and (max-width: 852px) {
+    padding: 0.5rem 0rem 0.5rem 0;
+    font-size: 1rem!important;
+    margin: 0 0 1.5rem 0; 
+  }
   @media screen and (max-width: 319px) {
     padding: 0.5rem 0rem 0.5rem 0;
+    font-size: 1rem!important;
+    margin: 0 0 0 0;
   }
+  &:hover {
+    color: #D4D4D4;
 `;

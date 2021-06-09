@@ -55,10 +55,18 @@ export const Ilustation = styled.img`
 
 export const Paragraph = styled.p`
   padding: 0.5rem 0;
-  font-size: 2rem;
+  font-size:1.2rem;
   color: #000;
+  @media screen and (max-width: 852px) {
+    padding: 0.5rem 2rem 0.5rem;
+    font-size: 1.1rem!important;
+    text-align:center;
+    margin: 0;
   @media screen and (max-width: 319px) {
-    padding: 0.5rem 0rem 0.5rem 0;
+    padding: 0.5rem 1rem 0.5rem ;
+    font-size: 1rem!important;
+    text-align:center;
+    margin: 0;
   }
 `;
 export const List = styled.ul`
@@ -77,3 +85,21 @@ export const Item = styled.li`
   font-size: 1.3rem;
   padding: 0.2rem 0;
 `;
+export const ContactLink= styled.a`
+text-decoration:none;
+margin: 0;
+color: #404040;
+text-decoration: none;
+cursor: pointer;
+font-weight:bold;
+transition: all 0.2s ease-in-out;
+@media screen and (max-width: 852px) {
+  padding: 0.5rem 0rem 0.5rem 0;
+  font-size: 1rem!important; 
+}
+@media screen and (max-width: 319px) {
+  font-size: 1rem!important;
+}
+&:hover {
+  color: #000;
+`

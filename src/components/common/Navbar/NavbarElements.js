@@ -50,7 +50,7 @@ export const NavBrand = styled(LinkBtn)`
   display: flex;
   align-items: center;
   text-decoration: none;
-  padding: 0 0rem 0 1rem;
+  padding: 0 0rem 0 2rem;
   font-size: 1.3rem;
   height: 100%;
   cursor: pointer;
@@ -68,7 +68,7 @@ export const Bars = styled(FaBars)`
   @media screen and (max-width: 852px) {
     display: block;
     position: absolute;
-    top: 0;
+    top: -0.1rem;
     right: 0;
     transform: translate(-100%, 75%);
     font-size: 1.8rem;

@@ -39,10 +39,11 @@ export const SubTitle = styled.h2`
 export const Paragraph = styled.p`
   padding: 0;
   margin: 0 0 0 2rem;
+  font-size:1.2rem;
   color: #000;
   @media screen and (max-width: 852px) {
     padding: 0.5rem 2rem 0.5rem;
-    font-size: 1.2rem!important;
+    font-size: 1.1rem!important;
     text-align:center;
     margin: 0;
   @media screen and (max-width: 319px) {
