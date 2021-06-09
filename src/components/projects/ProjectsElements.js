@@ -39,7 +39,6 @@ export const SubTitle = styled.h2`
 export const Paragraph = styled.p`
   padding: 0;
   margin: 0 0 0 2rem;
-  font-size: 2rem;
   color: #000;
   @media screen and (max-width: 852px) {
     padding: 0.5rem 2rem 0.5rem;
@@ -55,11 +54,13 @@ export const Paragraph = styled.p`
 `;
 export const ProjectLink = styled.a`
   text-decoration:none;
-  margin: 0 0 2rem 2rem ;
-  color: #000;
+  margin: 0.5rem 0 2rem 2rem;
+  color: #404040;
   text-decoration: none;
   padding: 0 2rem 0 0rem;
   cursor: pointer;
+  font-weight:bold;
+  transition: all 0.2s ease-in-out;
   @media screen and (max-width: 852px) {
     padding: 0.5rem 0rem 0.5rem 0;
     font-size: 1rem!important;
@@ -71,7 +72,5 @@ export const ProjectLink = styled.a`
     margin: 0 0 0 0;
   }
   &:hover {
-    transition: all 0.4s ease-in-out;
-    color: #404040;
-    
+    color: #000;
 `;

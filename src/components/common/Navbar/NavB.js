@@ -32,7 +32,6 @@ import { scrollToTop } from "react-scroll/modules/mixins/animate-scroll";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const [isTransparent, setIsTransparent] = useState(false);
   const [isLight, setIsLight] = useState(false);
   const [isBlack, setIsBlack] = useState(false);
   const [isHidden, setIsHidden] = useState(false);
@@ -65,11 +64,6 @@ const Navbar = () => {
   const toggleScroll = () => {
     scroll.scrollToTop();
   };
-  const toggleTransparence = () => {
-    setTimeout(() => {
-      setIsTransparent(true);
-    }, 200);
-  };
   const toggleLightBackground = () => {
     setTimeout(() => {
       setIsBlack(false);
@@ -82,34 +76,18 @@ const Navbar = () => {
       setIsBlack(true);
     }, 200);
   };
-  const dismiss = () => {
-    setTimeout(() => {
-      setIsTransparent(false);
-      setIsLight(false);
-      setIsBlack(false);
-    }, 2000);
-  };
-  const hideLink = () => {
-    setIsHidden(true);
-  };
-  const showLink = () => {
-    setIsHidden(false);
-  };
 
   const scrollDirection = useObservable(watchScroll, "Up");
-  const esconderNav = scrollDirection === "Down" ? "hidden" : "null";
-  const transparentarNav = isTransparent === true ? "transparent" : "null";
-  const aclararNav = isLight === true ? "light" : "null";
-  const aclararLink = isLight === true ? "font-black" : "null";
-  const oscurecerNav = isBlack === true ? "black" : "null";
-  const oscurecerLink = isBlack === true ? "font-light" : "null";
-  const ocultarNavLink = isHidden === true ? "hide" : "null";
+  const esconderNav = scrollDirection === "Down" ? "hidden" : "";
+  const aclararNav = isLight === true ? "light" : "";
+  const aclararLink = isLight === true ? "font-black" : "";
+  const oscurecerNav = isBlack === true ? "black" : "";
+  const oscurecerLink = isBlack === true ? "font-light" : "";
 
   useEffect(() => {
     scrollLock();
   }, [isOpen]);
   useEffect(() => {
-    setIsTransparent(false);
     setIsLight(false);
     setIsBlack(false);
   }, [scrollDirection]);
@@ -118,26 +96,19 @@ const Navbar = () => {
     <>
       <Sidebar hideLink={hideLink} toggle={toggle} isOpen={isOpen}></Sidebar>
       <Nav
-        className={`site-header ${esconderNav} ${transparentarNav} ${aclararNav} ${oscurecerNav}`}
+        className={`site-header ${esconderNav}  ${aclararNav} ${oscurecerNav}`}
       >
-        <NavBrand
-          className={`${aclararLink} ${oscurecerLink}`}
-          onClick={() => {
-            showLink();
-            toggleScroll();
-          }}
-          exact={true}
-          to="/"
-        >
+        <NavBrand onClick={()=>{
+          toggleScroll();
+          toggleBlackBackground();
+        }} className={`${aclararLink}`} exact={true} to="/">
           Guillermo Morton
         </NavBrand>
         <Bars className={ocultarNavLink} onClick={toggle} />
         <NavMenu>
           <NavLink
-            className={`${aclararLink} ${oscurecerLink} ${ocultarNavLink}`}
+            className={`${aclararLink}`}
             onClick={() => {
-              dismiss();
-              toggleTransparence();
               toggleLightBackground();
             }}
             to="about"
@@ -149,10 +120,8 @@ const Navbar = () => {
             About me
           </NavLink>
           <NavLink
-            className={`${aclararLink} ${oscurecerLink} ${ocultarNavLink}`}
+            className={`${aclararLink}`}
             onClick={() => {
-              dismiss();
-              toggleTransparence();
               toggleBlackBackground();
             }}
             to="experience"
@@ -164,10 +133,8 @@ const Navbar = () => {
             Experience
           </NavLink>
           <NavLink
-            className={`${aclararLink} ${oscurecerLink} ${ocultarNavLink}`}
+            className={`${aclararLink}`}
             onClick={() => {
-              dismiss();
-              toggleTransparence();
               toggleLightBackground();
             }}
             to="knowledge"
@@ -179,10 +146,8 @@ const Navbar = () => {
             Knowledge
           </NavLink>
           <NavLink
-            className={`${aclararLink} ${oscurecerLink} ${ocultarNavLink}`}
+            className={`${aclararLink}`}
             onClick={() => {
-              dismiss();
-              toggleTransparence();
               toggleBlackBackground();
             }}
             to="studies"
@@ -194,10 +159,8 @@ const Navbar = () => {
             Studies
           </NavLink>
           <NavLink
-            className={`${aclararLink} ${oscurecerLink} ${ocultarNavLink}`}
+            className={`${aclararLink}`}
             onClick={() => {
-              dismiss();
-              toggleTransparence();
               toggleLightBackground();
             }}
             to="projects"
