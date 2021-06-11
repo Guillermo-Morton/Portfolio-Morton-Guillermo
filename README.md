@@ -1,70 +1,75 @@
-# Getting Started with Create React App
+# Guillermo Morton's Web Portfolio
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+_Portfolio web, it was built to show my knowledge in some technologies_
 
-## Available Scripts
+## What can you do in this project?
 
-In the project directory, you can run:
+_For now you cant do too much here, just read and see some cool animations. It features:_
 
-### `npm start`
+* Smooth scroll between sections.
+* Contact page, you can send me an email using the built in formulary.
+* Usage of react-router-dom and RXJS hooks..
+* Navbar animations.
+* Complete responsive design.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## Starting 🚀
 
-### `npm test`
+_These instructions will allow you to get a copy of the project running on your local machine for development and testing purposes._
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `npm run build`
+### Pre-requirements 📋
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+_What things do you need to install the software and how to install them_
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+You will need some dependencies and programs: NodeJS, React Router, Rxjs Hooks, Styled Components, among others.
+```
 
-### `npm run eject`
+### Instalation 🔧
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+_We will proceed to clone the repository, and install the different dependencies_
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+```
+Git clone https://github.com/Guillermo-Morton/Portfolio-Morton-Guillermo.git
+```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+_Install npm with the command: npm install._
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+```
+npm install
+```
+_Run the project with: npm start._
 
-## Learn More
+```
+npm start
+```
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+_And voila, you can now test the site from your local machine_
 
-To learn React, check out the [React documentation](https://reactjs.org/).
 
-### Code Splitting
+## Built with 🛠️
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+_ReactJS was used to create this project_
 
-### Analyzing the Bundle Size
+* [React](https://es.reactjs.org/) - The web framework used.
+* [NodeJS](https://nodejs.org/es/) - Dependency manager.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+## Versions 📌
 
-### Making a Progressive Web App
+I used [Git](https://git-scm.com/) for the branch and version system.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+## Authors ✒️
 
-### Advanced Configuration
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+* **Guillermo Morton** - *Fullstack Developer* - [Github](https://github.com/Guillermo-Morton)
 
-### Deployment
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+## Licence 📄
 
-### `npm run build` fails to minify
+This project is not licensed
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+---
+⌨️ with ❤️ by [Guillermo Morton](https://github.com/Guillermo-Morton) 😊
