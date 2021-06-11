@@ -8,7 +8,8 @@ _For now you cant do too much here, just read and see some cool animations. It f
 
 * Smooth scroll between sections.
 * Contact page, you can send me an email using the built in formulary.
-* Usage of react-router-dom and RXJS hooks..
+* Usage of react-router-dom and RXJS hooks.
+* Built using entirely React-Styled-Components.
 * Navbar animations.
 * Complete responsive design.
 
