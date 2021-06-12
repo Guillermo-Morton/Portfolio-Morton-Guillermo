@@ -22,7 +22,7 @@ const About = () => {
       </div>
       <div>
         <Container>
-          <Flex className='about'>
+          <Flex className="about">
             <Ilustation src={ilustation2}></Ilustation>
             <div>
               <Title className="font-black">About me</Title>
@@ -34,12 +34,13 @@ const About = () => {
                 as much as I could since then.
               </Paragraph>
               <Paragraph>
-                Everything happened really fast, the thought came into my mind
-                and I knew I had to. So I started learning programming.
+                I've never thought it could happen so fast. I left everything i
+                was doing behind to follow my real vocation. So I started
+                learning programming.
               </Paragraph>
               <Paragraph>
-                I fell in love immediately with what I'm doing. I'm always up to
-                learn new things and technologies.
+                I fell in love immediately with what I'm doing. I am always
+                willing to learn new things and technologies.
               </Paragraph>
             </div>
           </Flex>

@@ -24,7 +24,7 @@ const Experience = () => {
               <Paragraph>
                 As a junior dev I made a couple of websites for local business
                 where I optimized for learning and improving rather than making
-                money. As of now I feel ready provide value to clients and
+                money. As of now I feel ready to provide value to clients and
                 employers alike.
               </Paragraph>
               <Paragraph>
