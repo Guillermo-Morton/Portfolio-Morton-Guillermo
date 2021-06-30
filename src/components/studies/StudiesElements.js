@@ -93,3 +93,25 @@ export const Card = styled.div`
     text-align:center;
   }
 `
+export const CetificateLink = styled.a`
+  text-decoration:none;
+  margin: 0.5rem 0 2rem 2rem;
+  color: #404040;
+  text-decoration: none;
+  padding: 0 2rem 0 0rem;
+  cursor: pointer;
+  font-weight:bold;
+  transition: all 0.2s ease-in-out;
+  @media screen and (max-width: 852px) {
+    padding: 0.5rem 0rem 0.5rem 0;
+    font-size: 1rem!important;
+    margin: 0 0 1.5rem 0; 
+  }
+  @media screen and (max-width: 319px) {
+    padding: 0.5rem 0rem 0.5rem 0;
+    font-size: 1rem!important;
+    margin: 0 0 0 0;
+  }
+  &:hover {
+    color: #000;
+`;

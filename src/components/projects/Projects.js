@@ -14,7 +14,7 @@ const Projects = () => {
       <Fragment>
         <div>
           <Container>
-            <Flex className='projects'>
+            <Flex className="projects">
               <Title className="font-black">My Projects</Title>
 
               <SubTitle>Rollingnews</SubTitle>
@@ -23,12 +23,18 @@ const Projects = () => {
                 as ReactBootstrap, ReactRouterDOM, React RXJS and others.
                 Fictional project for RollingCode School Module IV.
               </Paragraph>
-              <ProjectLink
-                target="_blank"
-                href="https://rollingnewsproject.netlify.app/"
-              >
-                View project
-              </ProjectLink>
+              <div className="d-flex-start">
+                <ProjectLink
+                  className="low-margin"
+                  target="_blank"
+                  href="https://rollingnewsproject.netlify.app/"
+                >
+                  View project
+                </ProjectLink>
+                <ProjectLink className="low-margin" target="_blank" href="https://github.com/Guillermo-Morton/RollingNews">
+                  View repository
+                </ProjectLink>
+              </div>
 
               <SubTitle>Bartender's House</SubTitle>
               <Paragraph>
@@ -36,12 +42,22 @@ const Projects = () => {
                 functional website. It was made using HTML5, CSS3 and Bootstrap.{" "}
                 <br /> Fictional project for RollingCode School Module I.
               </Paragraph>
-              <ProjectLink
-                target="_blank"
-                href="https://bartendershouse.netlify.app/"
-              >
-                View project
-              </ProjectLink>
+              <div className="d-flex-start">
+                <ProjectLink
+                  className="low-margin"
+                  target="_blank"
+                  href="https://bartendershouse.netlify.app/"
+                >
+                  View project
+                </ProjectLink>
+                <ProjectLink
+                  className="low-margin"
+                  target="_blank"
+                  href=""
+                >
+                  View repository
+                </ProjectLink>
+              </div>
 
               <SubTitle>Rolling Disney Plus</SubTitle>
               <Paragraph>
@@ -49,12 +65,22 @@ const Projects = () => {
                 made using Java Script, CSS3 and HTML5. <br /> Fictional project
                 for RollingCode School Module II.
               </Paragraph>
-              <ProjectLink
-                target="_blank"
-                href="https://rollingdisneyplus.netlify.app/"
-              >
-                View project
-              </ProjectLink>
+              <div className="d-flex-start">
+                <ProjectLink
+                  className="low-margin"
+                  target="_blank"
+                  href="https://rollingdisneyplus.netlify.app/"
+                >
+                  View project
+                </ProjectLink>
+                <ProjectLink
+                  className="low-margin"
+                  target="_blank"
+                  href="https://github.com/Guillermo-Morton/RollingDisneyPlus"
+                >
+                  View repository
+                </ProjectLink>
+              </div>
 
               <SubTitle>Morty's Two Projects</SubTitle>
               <Paragraph>

@@ -6,6 +6,7 @@ import {
   Flex,
   Paragraph,
   Card,
+  CetificateLink
 } from "./StudiesElements";
 import { Container } from "../../components/GeneralElements";
 const Studies = () => {
@@ -20,18 +21,22 @@ const Studies = () => {
                 <Card>
                   <SubTitle>RollingCode School</SubTitle>
                   <Paragraph>Full-stack career</Paragraph>
+                  <CetificateLink>View</CetificateLink>
                 </Card>
                 <Card>
                   <SubTitle>GrassHopper</SubTitle>
                   <Paragraph>Fundamentals</Paragraph>
+                  <CetificateLink>View</CetificateLink>
                 </Card>
                 <Card>
                   <SubTitle>GrassHopper</SubTitle>
                   <Paragraph>Fundamentals II</Paragraph>
+                  <CetificateLink>View</CetificateLink>
                 </Card>
                 <Card>
                   <SubTitle>GrassHopper</SubTitle>
                   <Paragraph>Introduction to interviews</Paragraph>
+                  <CetificateLink>View</CetificateLink>
                 </Card>
               </div>
             </div>
