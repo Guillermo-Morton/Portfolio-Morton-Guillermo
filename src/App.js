@@ -5,7 +5,10 @@ import FooterComp from './components/common/Footer/FooterComp'
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import Home from './components/Home'
 import Contact from './components/contact/Contact'
+import animateCss from "animate.css";
+
 function App() {
+
   return (
     <Router>
       <Navbar/>

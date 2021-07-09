@@ -1,4 +1,4 @@
-import React, { Fragment } from "react";
+import React, { Fragment, useEffect} from "react";
 import "./studies.scss";
 import {
   Title,
@@ -8,13 +8,18 @@ import {
   Card,
   CetificateLink
 } from "./StudiesElements";
+import Aos from "aos";
+import "aos/dist/aos.css";
 import { Container } from "../../components/GeneralElements";
 const Studies = () => {
+  useEffect(() => {
+    Aos.init({ duration: 800 });
+  }, []);
   return (
     <Fragment>
       <div className="black">
-        <Container>
-          <Flex className='studies'>
+        <Container className='studies'>
+          <Flex data-aos="fade-up">
             <div className="d-flex">
               <Title>My Studies</Title>
               <div className="d-flex">

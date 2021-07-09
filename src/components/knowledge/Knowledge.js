@@ -1,4 +1,4 @@
-import React, { Fragment } from "react";
+import React, { Fragment, useEffect} from "react";
 import {
   Title,
   SubTitle,
@@ -9,12 +9,17 @@ import {
 } from "./KnowledgeElements";
 import ilustation4 from "../../images/ilustration4.png";
 import { Container } from "../../components/GeneralElements";
+import Aos from "aos";
+import "aos/dist/aos.css";
 const Knowledge = () => {
+  useEffect(() => {
+    Aos.init({ duration: 800 });
+  }, []);
   return (
     <Fragment>
       <div>
-        <Container>
-          <Flex className="knowledge">
+        <Container className="knowledge">
+          <Flex data-aos="fade-up">
             <div>
               <Title>My Knowledge</Title>
               <SubTitle>Technologies I use</SubTitle>

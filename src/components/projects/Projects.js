@@ -1,4 +1,4 @@
-import React, { Fragment } from "react";
+import React, { Fragment, useEffect} from "react";
 import "./projects.scss";
 import {
   Title,
@@ -8,13 +8,18 @@ import {
   ProjectLink,
 } from "./ProjectsElements";
 import { Container } from "../../components/GeneralElements";
+import Aos from "aos";
+import "aos/dist/aos.css";
 const Projects = () => {
+  useEffect(() => {
+    Aos.init({ duration: 800 });
+  }, []);
   return (
     <div>
       <Fragment>
         <div>
-          <Container>
-            <Flex className="projects">
+          <Container className="projects">
+            <Flex data-aos="fade-up">
               <Title className="font-black">My Projects</Title>
 
               <SubTitle>Rollingnews</SubTitle>

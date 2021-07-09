@@ -1,15 +1,22 @@
-import React, { Fragment } from "react";
+import React, { Fragment, useEffect} from "react";
 import "./about.scss";
 import { Title, SubTitle, Ilustation, Flex, Paragraph } from "./AboutElements";
 import ilustation1 from "../../images/ilustration1.png";
 import ilustation2 from "../../images/ilustration2.png";
 import { Container } from "../../components/GeneralElements";
+import Aos from "aos";
+import "aos/dist/aos.css";
+
 const About = () => {
+  
+  useEffect(() => {
+    Aos.init({ duration: 800});
+  }, []);
   return (
     <Fragment>
       <div className="black">
         <Container>
-          <Flex>
+          <Flex data-aos="fade-up">
             <div>
               <Title>
                 Hi <br /> I'm Guillermo
@@ -21,8 +28,8 @@ const About = () => {
         </Container>
       </div>
       <div>
-        <Container>
-          <Flex className="about">
+        <Container className="about">
+          <Flex data-aos="fade-up">
             <Ilustation src={ilustation2}></Ilustation>
             <div>
               <Title className="font-black">About me</Title>

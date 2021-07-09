@@ -1,4 +1,4 @@
-import React, { Fragment } from "react";
+import React, { Fragment, useEffect} from "react";
 import {
   Title,
   Ilustation,
@@ -9,16 +9,21 @@ import {
 import ilustation3 from "../../images/ilustration3.png";
 import { Container } from "../../components/GeneralElements";
 import { animateScroll as scroll } from "react-scroll";
-const Experience = () => {
+import Aos from "aos";
+import "aos/dist/aos.css";
 
+const Experience = () => {
   const toggleScroll = () => {
     scroll.scrollToTop();
   };
+  useEffect(() => {
+    Aos.init({ duration: 800 });
+  }, []);
   return (
     <Fragment>
       <div className="black">
-        <Container>
-          <Flex className="experience">
+        <Container className="experience">
+          <Flex data-aos="fade-up">
             <div>
               <Title>My experience</Title>
               <Paragraph>

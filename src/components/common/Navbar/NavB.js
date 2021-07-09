@@ -29,6 +29,8 @@ import {
 
 import { useObservable } from "rxjs-hooks";
 import { scrollToTop } from "react-scroll/modules/mixins/animate-scroll";
+import Aos from "aos";
+import "aos/dist/aos.css";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -97,6 +99,9 @@ const Navbar = () => {
     setIsLight(false);
     setIsBlack(false);
   }, [scrollDirection]);
+  useEffect(() => {
+    Aos.init({ duration: 800 });
+  }, []);
 
   return (
     <>
@@ -104,15 +109,15 @@ const Navbar = () => {
       <Nav
         className={`site-header ${esconderNav}  ${aclararNav} ${oscurecerNav}`}
       >
-        <NavBrand onClick={()=>{
+        <NavBrand data-aos="slide-down" onClick={()=>{
           showLink();
           toggleScroll();
           toggleBlackBackground();
         }} className={`${aclararLink}`} exact={true} to="/">
           Guillermo Morton
         </NavBrand>
-        <Bars className={ocultarNavLink} onClick={toggle} />
-        <NavMenu>
+        <Bars data-aos="slide-down" className={ocultarNavLink} onClick={toggle} />
+        <NavMenu data-aos="slide-down">
           <NavLink
             className={`${aclararLink} ${ocultarNavLink}`}
             onClick={() => {
@@ -179,7 +184,7 @@ const Navbar = () => {
             Projects
           </NavLink>
         </NavMenu>
-        <NavBtn>
+        <NavBtn data-aos="slide-down">
           <NavBtnLink className={ocultarNavLink} onClick={()=>{
             toggleScroll();
             toggleBlackBackground();
