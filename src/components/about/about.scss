@@ -1,3 +1,14 @@
 .black{
     background-color: black;
 }
+.content{
+    @media screen and (max-width: 852px) {
+        padding: 0 3rem 5rem ;
+      }
+    @media screen and (max-width: 515px) {
+        padding: 0 1rem 4rem ;
+      }
+    @media screen and (max-width: 356px) {
+        padding: 0 0 3rem ;
+      }
+}

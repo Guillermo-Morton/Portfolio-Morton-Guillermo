@@ -16,7 +16,7 @@
   &.hidden {
     height: 40px!important;
     transition: mdc-animation-enter(transform, 200ms);
-    @media screen and (max-width: 768px) {
+    @media screen and (max-width: 852px) {
       transform: translate3d(0, -100%, 0);
     }
   }

@@ -12,6 +12,7 @@ import {
   NavBtn,
   NavBtnLink,
   NavBrand,
+  BarsContainer
 } from "./NavbarElements";
 
 import Sidebar from "../Sidebar/Sidebar";
@@ -116,7 +117,9 @@ const Navbar = () => {
         }} className={`${aclararLink}`} exact={true} to="/">
           Guillermo Morton
         </NavBrand>
-        <Bars data-aos="slide-down" className={ocultarNavLink} onClick={toggle} />
+        <BarsContainer data-aos="slide-down">
+        <Bars className={ocultarNavLink} onClick={toggle} />
+        </BarsContainer>
         <NavMenu data-aos="slide-down">
           <NavLink
             className={`${aclararLink} ${ocultarNavLink}`}

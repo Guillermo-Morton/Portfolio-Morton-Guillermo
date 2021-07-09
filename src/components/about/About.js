@@ -31,7 +31,7 @@ const About = () => {
         <Container className="about">
           <Flex data-aos="fade-up">
             <Ilustation src={ilustation2}></Ilustation>
-            <div>
+            <div className='content'>
               <Title className="font-black">About me</Title>
               <SubTitle className="font-black">
                 A developer from Argentina.

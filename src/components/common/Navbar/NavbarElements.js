@@ -54,7 +54,9 @@ export const NavBrand = styled(LinkBtn)`
   font-size: 1.3rem;
   height: 100%;
   cursor: pointer;
-
+  @media screen and (max-width: 400px) {
+    padding: 0 0rem 0 1rem;
+  }
   &:hover {
     transition: all 0.4s ease-in-out;
     color: #D4D4D4;
@@ -64,17 +66,22 @@ export const NavBrand = styled(LinkBtn)`
 export const Bars = styled(FaBars)`
   display: none;
   color: #fff;
-
   @media screen and (max-width: 852px) {
     display: block;
     position: absolute;
-    top: -0.1rem;
-    right: 0;
-    transform: translate(-100%, 75%);
+    top: 0.8rem;
+    right: 2rem;
     font-size: 1.8rem;
     cursor: pointer;
   }
+  @media screen and (max-width: 400px) {
+    right: 1rem;
+  }
+
+
 `;
+export const BarsContainer= styled.div`
+`
 
 export const NavMenu = styled.div`
   display: flex;
