@@ -53,7 +53,7 @@ const Projects = () => {
                 <ProjectLink
                   className="low-margin"
                   target="_blank"
-                  href=""
+                  href="https://github.com/Guillermo-Morton/BartendersHouse"
                 >
                   View repository
                 </ProjectLink>
